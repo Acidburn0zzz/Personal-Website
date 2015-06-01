@@ -1,0 +1,27 @@
+{
+  "name": "zaahir.ca",
+  "version": "1.0.0",
+  "description": "Zaahir Moolla personal website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moollaza/Personal-Website.git"
+  },
+  "author": "Zaahir Moolla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moollaza/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/moollaza/Personal-Website#readme",
+  "dependencies": {
+    "getconfig": "^2.1.0",
+    "good": "^6.1.4",
+    "good-console": "^5.0.1",
+    "hapi": "^8.6.0",
+    "swig": "^1.4.2"
+  }
+}
