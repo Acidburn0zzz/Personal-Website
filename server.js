@@ -12,7 +12,7 @@ var server = new Hapi.Server();
 // Setup the server with a host and port
 server.connection({
 	host: process.env.HOST || "localhost",
-	port: process.env.PORT || "1234"
+	port: process.env.PORT || "5000"
 });
 
 
@@ -25,7 +25,7 @@ server.views({
 	path: './views',
 	layoutPath: './views/layouts',
 	partialsPath: './views/partials',
-	layout: 'default',
+	// layout: 'default',
 	isCached: process.env.NODE_ENV === 'production'
 });
 
@@ -35,12 +35,25 @@ module.exports = server;
 
 
 // Routes
+
+// Index
 server.route({
 	method: 'GET',
 	path: '/',
-	handler: function (request, reply) {
-		reply('Hello, Zaahir!');
+	handler: {
+		view: 'index'
 	}
+});
+
+//  Public dir
+server.route({
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+            path: 'public'
+        }
+    }
 });
 
 
