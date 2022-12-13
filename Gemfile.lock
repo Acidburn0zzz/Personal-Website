@@ -22,6 +22,7 @@ GEM
       tzinfo (~> 1.1)
     backports (3.6.4)
     builder (3.2.2)
+    crass (1.0.6)
     daemons (1.2.1)
     erubis (2.7.0)
     eventmachine (1.0.7)
@@ -32,13 +33,17 @@ GEM
     i18n (0.7.0)
     json (1.8.2)
     kgio (2.9.3)
-    loofah (2.0.1)
+    loofah (2.19.1)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mini_portile (0.6.2)
+    mini_portile2 (2.1.0)
     minitest (5.5.1)
     multi_json (1.11.0)
-    nokogiri (1.6.6.2-x64-mingw32)
-      mini_portile (~> 0.6.0)
+    newrelic_rpm (8.2.0)
+    nokogiri (1.6.8.1)
+      mini_portile2 (~> 2.1.0)
+    nokogiri (1.6.8.1-x64-mingw32)
+      mini_portile2 (~> 2.1.0)
     rack (1.6.0)
     rack-google-analytics (1.2.0)
       actionpack
@@ -84,11 +89,13 @@ GEM
       raindrops (~> 0.7)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
   foreman
   haml
+  newrelic_rpm
   rack-google-analytics
   sinatra
   sinatra-contrib
